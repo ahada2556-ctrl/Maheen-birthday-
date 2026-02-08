@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Maheen ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff6a88, #ff99ac);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.typing {
+  font-size: 1.4rem;
+  margin: 20px 0;
+}
+
+.card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 25px;
+  text-align: left;
+  line-height: 1.8;
+  animation: fadeUp 2s;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.heart {
+  font-size: 2.5rem;
+  animation: beat 1.2s infinite;
+}
+
+@keyframes beat {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
+/* Photo Gallery */
+.gallery {
+  margin-top: 40px;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  gap: 15px;
+}
+
+.photos img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* I LOVE YOU floating */
+.love {
+  position: fixed;
+  bottom: -50px;
+  color: #fff;
+  font-size: 18px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 1.2rem;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Music -->
+<audio autoplay loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">
+</audio>
+
+<div class="container">
+
+  <h1>HAPPIEST BIRTHDAY MAHEEN ❤️</h1>
+  <div class="typing" id="typing"></div>
+  <div class="heart">💖</div>
+
+  <div class="card">
+    Allah pak humesha tumhe khush rakhain,  
+    tumhari har takleef aur pareshani door karain,  
+    tumhari har dua qubool ho. Ameen 🤍  
+
+    <br><br>
+
+    You don’t know what you mean to me.  
+    Tum meri zindagi ka woh hissa ho jo main kabhi khona nahi chahta.
+
+    <br><br>
+
+    You changed my life, my happiness, my world.  
+    Every moment with you feels special.
+
+    <br><br>
+
+    Tum bohat special ho, bohat precious ho —  
+    aur hamesha raho gi ❤️
+
+    <br><br>
+
+    Enjoy your day my love.  
+    I am always with you 🤍
+  </div>
+
+  <div class="gallery">
+    <h2>Our Memories 📸</h2>
+    <div class="photos">
+      <img src="photo1.jpg">
+      <img src="photo2.jpg">
+      <img src="photo3.jpg">
+      <img src="photo4.jpg">
+    </div>
+  </div>
+
+  <footer>
+    Forever yours  
+    <br><strong>Ahad ❤️</strong>
+  </footer>
+
+</div>
+
+<script>
+// Typing text
+const texts = [
+  "My Love 💕",
+  "My Happiness 🌸",
+  "My Safe Place 🤍",
+  "My Maheen 💖"
+];
+let i = 0, j = 0;
+
+function type() {
+  if (i >= texts.length) i = 0;
+  document.getElementById("typing").innerText = texts[i].slice(0, j++);
+  if (j > texts[i].length) {
+    setTimeout(() => { j = 0; i++; }, 1500);
+  }
+  setTimeout(type, 120);
+}
+type();
+
+// I LOVE YOU animation
+function createLove() {
+  const love = document.createElement("div");
+  love.className = "love";
+  love.innerText = "I LOVE YOU ❤️";
+  love.style.left = Math.random() * 100 + "vw";
+  love.style.fontSize = Math.random() * 10 + 16 + "px";
+  document.body.appendChild(love);
+  setTimeout(() => love.remove(), 6000);
+}
+setInterval(createLove, 400);
+</script>
+
+</body>
+</html>
